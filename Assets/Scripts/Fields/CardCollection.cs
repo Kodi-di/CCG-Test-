@@ -104,4 +104,5 @@ public class CardCollection : MonoBehaviour
             throw new Exception("The object must contain 'Card'");
         }
     }
+
 }

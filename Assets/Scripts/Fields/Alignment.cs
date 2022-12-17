@@ -59,7 +59,7 @@ public class Alignment : MonoBehaviour
 
         if(_cards.Count == 1)
         {
-            position.Add((new(0, 0, 0), new(0, -9, 0)));
+            position.Add((new(0, 0, 0), new(0, -_bottomSpread, 0)));
 
             return position;
         }

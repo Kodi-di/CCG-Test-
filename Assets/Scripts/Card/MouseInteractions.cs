@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
+[RequireComponent(typeof(CanvasGroup))]
 public class MouseInteractions : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
@@ -47,9 +48,9 @@ public class MouseInteractions : MonoBehaviour, IBeginDragHandler, IDragHandler,
     {
         transform.SetParent(_defaultParent);
 
-        GetComponent<CanvasGroup>().blocksRaycasts = true;
-
         _defaultParent.GetComponent<CardCollection>().AddCard(GetComponent<Card>());
+
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         _image.color = Color.clear;
 
